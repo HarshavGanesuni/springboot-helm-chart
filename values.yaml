@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: your-docker-repo/springboot-app
+  repository: your-docker-repo/springboot-helm-chart
   tag: latest
   pullPolicy: IfNotPresent
 
