@@ -58,6 +58,7 @@ pipeline {
                         bat 'helm version'
 
                         // Package the Helm chart (Assuming your chart is in the ./helm-chart directory)
+                        bat "cd D:\JavaProjects\Helm\springboot-helm-chart"
                         bat "helm package ${CHART_DIR}"
 
                         // Authenticate Helm with ECR (Enable OCI support for Helm)
