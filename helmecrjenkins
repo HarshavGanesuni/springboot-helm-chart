@@ -7,7 +7,7 @@ pipeline {
         REPOSITORY_NAME = 'springdemo'
         HELM_REPOSITORY_NAME = 'springdemo-chart'
         CHART_DIR = './springboot-helm-chart'  // Directory containing your Helm chart
-        CHART_DIR = './springboot-helm-chart'  // Directory containing your Helm chart
+
     }
 
     stages {
