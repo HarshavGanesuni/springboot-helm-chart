@@ -28,7 +28,7 @@ pipeline {
         stage('Push Docker to ECR') {
             steps {
                 script {
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'cli-id']]) {
+                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials']]) {
                         // Ensure AWS CLI is available on Windows
                         sh 'aws --version'
 
@@ -53,7 +53,7 @@ pipeline {
         stage('Build and Push Helm Chart') {
             steps {
                 script {
-                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'cli-id']]) {
+                    withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', credentialsId: 'aws-credentials']]) {
                         // Ensure Helm is installed
                         sh 'helm version'
 
